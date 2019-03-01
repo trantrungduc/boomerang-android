@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <SurfaceView android:id="@+id/CameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></SurfaceView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/storyVideotoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:text="@string/timer" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/record_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:src="@drawable/record_button"
+        android:layout_marginBottom="58dp"/>
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="58dp"
+        app:cpv_animAutostart="true"
+        android:visibility="gone"
+        app:cpv_color="@android:color/darker_gray"
+        app:cpv_indeterminate="true" />
+
+</RelativeLayout>
